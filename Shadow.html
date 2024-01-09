@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bax and Text shadow</title>
+</head>
+<style>
+    .container{
+        display: flex;
+    }
+    .card{
+        /* border: 2px solid red; */
+        padding: 23px 12px;
+        margin: 23px 12px;
+        background-color: aqua;
+        /* box-shadow: 10px 12px greenyellow; */
+        /* box-shadow: -10px -12px greenyellow; */
+        /* box-shadow: 10px 12px 10px greenyellow; */  /* blur radius */
+        /* box-shadow: 10px 12px 10px 10px greenyellow; /* spread radius */
+        /* box-shadow: inset 3px 80px goldenrod; */
+        box-shadow: 8px 10px green, 6px 15px red;
+    }
+    #card-1 h2{
+        text-shadow: 2px 5px green;
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="card" id="card-1">
+            <h2>Card1</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat quidem veniam pariatur tempora, ipsa aliquid dolorem, modi tenetur velit blanditiis recusandae magnam! Numquam, eaque nisi maxime quam ab reprehenderit in.
+            </p>
+        </div>
+        <div class="card" id="card-2">
+            <h2>Card2</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique voluptates maxime ratione perspiciatis, necessitatibus ea? Iusto, rerum, numquam reiciendis eveniet tenetur unde eaque facere soluta, vitae omnis corrupti error sed.</p>
+        </div>
+        <div class="card" id="card-3">
+            <h2>Card3</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel sequi unde nemo officia aperiam quibusdam inventore, voluptates deserunt modi at ducimus odio quod, harum exercitationem non consequuntur dolores. Fugit, iste.</p>
+        </div>
+    </div>
+</body>
+</html>

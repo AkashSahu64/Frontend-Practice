@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Navigation Menu Example</title>
+  <style>
+    body {
+      display: flex;
+      min-height: 100vh;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    nav {
+      background-color: #f1f1f1;
+      padding: 20px;
+    }
+
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li {
+      margin-bottom: 10px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+    }
+
+    .content {
+      padding: 20px;
+    }
+
+    .hidden {
+      display: none;
+    }
+  </style>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      var navLinks = document.querySelectorAll("nav ul li a");
+      var sections = document.querySelectorAll(".content section");
+
+      navLinks.forEach(function(link) {
+        link.addEventListener("click", function(e) {
+          e.preventDefault();
+          var target = this.getAttribute("href").substring(1);
+
+          sections.forEach(function(section) {
+            section.classList.add("hidden");
+          });
+
+          document.getElementById(target).classList.remove("hidden");
+        });
+      });
+    });
+  </script>
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#information">Information</a></li>
+      <li><a href="#guide">Guide</a></li>
+    </ul>
+  </nav>
+
+  <div class="content">
+    <section id="home">
+      <h1>Home</h1>
+      <p>Welcome to the home section.<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora doloremque aperiam sunt adipisci saepe inventore impedit porro, deleniti reiciendis veritatis temporibus corporis nostrum nemo doloribus commodi! Quia esse a culpa ratione dicta eveniet, ipsam, sequi dolor consequuntur assumenda architecto repudiandae.</p>
+    </section>
+
+    <section id="contact" class="hidden">
+      <h1>Contact</h1>
+      <p>Contact us here.<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perspiciatis deserunt quisquam amet, dolorem voluptatem quos corrupti placeat magnam aliquid fuga.</p>
+    </section>
+
+    <section id="information" class="hidden">
+      <h1>Information</h1>
+      <p>Here's some information.<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rerum, cumque sequi laboriosam repellendus deserunt beatae maxime ducimus, facere consequuntur voluptatum quidem quasi sunt provident fugiat quisquam sint non. Voluptas, unde numquam voluptatum sunt quae est accusamus ab aliquid consequatur perspiciatis.<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Alias esse explicabo enim et culpa eveniet doloribus temporibus repudiandae ipsum labore.<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor vero minima consequatur hic quis porro. Sit corporis mollitia repellendus commodi fuga, officia assumenda, animi modi aspernatur facilis ut tempora est!</p>
+    </section>
+
+    <section id="guide" class="hidden">
+      <h1>Guide</h1>
+      <p>Here's a guide for you.<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus quisquam deserunt beatae laborum dolorum soluta impedit? Esse, non quisquam sunt placeat illo hic iusto aperiam rerum, aspernatur tenetur impedit ut eos. Adipisci accusamus molestiae ratione.<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus ipsam numquam tempore eveniet aliquid? Molestiae dolorem, architecto quo illo incidunt vel quia esse saepe! Nihil!</p>
+    </section>
+  </div>
+</body>
+</html>

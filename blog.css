@@ -1,0 +1,41 @@
+/* Reset default margin and padding */
+body, h1, h2, h3, h4, h5, h6, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Set body background and font styles */
+body {
+    /* background-image: url("background.jpg"); */
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Header styles */
+header {
+    background-color: #f1f1f1;
+    padding: 20px;
+    /* text-align: center; */
+}
+
+header h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+}
+
+nav a {
+    text-decoration: none;
+    color: #131212;
+    margin: 0 10px;
+}
+
+nav a.active {
+    color: #ff0000;
+    font-weight: bold;
+}

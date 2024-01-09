@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation & Key-frem</title>
+    <style>
+        .box{
+            background:red;
+            width: 250px;
+            height: 250px;
+            position: relative;
+            animation-name: akash;
+            animation-duration: 2s;
+            animation-iteration-count: 3;
+            animation-fill-mode: forwards;
+            animation-timing-function: ease;
+            /* animation-delay: 2s; */
+            /* animation-direction: reverse; */
+        }
+        /* @keyframes akash{
+            from{
+                width: 0px;
+            }
+            to{
+                width: 100vw;
+            }
+        } */
+        @keyframes akash{
+            0%{
+                top: 0px;
+                left: 0px;
+            }
+            25%{
+                top: 200px;
+                left: 300px;
+            }
+            50%{
+                    top: 500px;
+                    left: 700px;
+            }
+            75%{
+                    top: 900px;
+                    left: 900px;
+            }100%{
+                    top: 100%;
+                    left: 50%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="containter">
+        <div class="box">
+            This is box
+        </div>
+    </div>
+</body>
+</html>

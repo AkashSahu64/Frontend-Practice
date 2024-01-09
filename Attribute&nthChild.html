@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attribute and nth chlid psuedo selector</title>
+    <style>
+        input{
+            display: block;
+        }
+        .container{
+            display: block;
+            width: 230px;
+            margin: auto;
+        }
+        input[type="text"]{
+            margin: 10px;
+            border: 2px solid black;
+        }
+        a[target]{
+            color: brown;
+        }
+        a[target="_parent"]{
+            color: rgb(8, 240, 112);
+        }
+        li:nth-child(3){
+            color: blue;
+        }
+        li:nth-child(even){
+            color: rgb(255, 21, 0);
+        }
+        li:nth-child(odd){
+            color: rgb(0, 255, 81);
+        }
+        li:nth-child(2n+2){
+            background-color: rgb(242, 0, 255);
+        }
+    </style>
+</head>
+<body>
+    <h1><a href="http://google.com" target="_blank">Google</a></h1>
+    <div class="container">
+        <h1><a href="http://facebook.com" target="_parent">Facebook</a></h1>
+        <h1><a href="http://youtube.com" target="_top">Youtube</a></h1>
+        <ul>
+            <li class="item" id="item-1">item-1</li>
+            <li class="item" id="item-2">item-2</li>
+            <li class="item" id="item-3">item-3</li>
+            <li class="item" id="item-4">item-4</li>
+            <li class="item" id="item-5">item-5</li>
+            <li class="item" id="box-1">item-6</li>
+            <li class="item" id="box-2">item-7</li>
+            <li class="item" id="box-3">item-8</li>
+            <li class="item" id="box-4">item-9</li>
+            <li class="item" id="box-5">item-10</li>
+        </ul>
+        <form action="" class="form-contant">
+            <input type="text" placeholder="Enter your name">
+            <input type="mail" placeholder="Enter your mail">
+            <input type="password" placeholder="Enter password">
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+</html>

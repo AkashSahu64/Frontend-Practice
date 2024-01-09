@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Before and after pseudo Selector</title>
+    <style>
+        *{
+            padding: 0%;
+            margin: 0%;
+        }
+        body{
+            background-color: black;
+            color: white;
+            /* background: url("https://source.unsplash.com/1600x900/?nature,water") no-repeat center center/cover; */
+        }
+        header::before{
+            background: url("https://source.unsplash.com/1600x900/?flower") no-repeat center center/cover;
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.3;
+        }
+        .navication{
+            display: flex;
+        }
+        li{
+            list-style: none;
+            padding: 25px 23px;
+        }
+
+        section{
+            /* border: 2px solid red; */
+            height: 350px;
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            margin: 6px 25px;
+            justify-content: center;
+            font-size: 2em;
+        }
+        h1{
+            /* font-size: 60px; */
+            margin: 30px;
+        }
+         /* p{ 
+            font-size: 20px;
+        }  */
+    </style>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <ul class="navication">
+                <li class="item">Home</li>
+                <li class="item">About</li>
+                <li class="item">services</li>
+                <li class="item">Contact</li>
+            </ul>
+        </div>
+    </header>
+        <section>
+            <h1>Welcome to my web World</h1>
+            <!-- <p>Hello! I'm Akash Sahu, a passionate and driven college student on a mission to make a meaningful impact in
+                the world through Programming/Coding.
+                I am currently pursuing in B.E. 2nd Year at Institute of Engineering and Technology , Khandari Agra(Dr. Bhim
+                Rao Ambedkar University, Agar), where I have been fortunate to explore diverse subjects such as Computer
+                Science Student.
+                Throughout my college journey, I have actively sought opportunities to gain practical experience. I had the
+                privilege of interning at my college, where I worked on Class Representative(CR) post and honed my technical
+                skill(Programming language). Additionally, my involvement in Coding Club allowed me to collaborate with a
+                diverse team and develop my leadership and communication abilities.
+                In addition to my academic pursuits, I have developed proficiency in C,C++, Java,
+                Python,HTML,CSS,JS,SQL,Data Structure,DBMS. Moreover, my college experience has sharpened my ability to
+                communicate complex ideas effectively, adapt to changing situations, and work collaboratively in team
+                environments.
+                Looking ahead, my ultimate goal is to Creative visionary. I am particularly passionate about my programming
+                and aim to contribute to Technological innovation for societal progress. I am committed to lifelong learning
+                and plan to pursue further education and certifications to stay at the forefront of industry trends and
+                innovations.
+                When I'm not immersed in my studies or pursuing professional endeavors, you'll often find me Competitive
+                programming. These activities not only provide me with a much-needed balance but also fuel my creativity and
+                ability to approach challenges from different perspectives.</p> -->
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam unde tenetur alias facilis laborum velit dicta odit maiores deserunt eaque odio autem ab accusantium repudiandae vitae, id commodi aliquam! Voluptatum eaque quos quae Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, pariatur.
+                </p>
+        </section>
+</body>
+</html>

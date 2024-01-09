@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Navigation Menu Example</title>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    nav {
+      background-color: #f1f1f1;
+      padding: 20px;
+    }
+
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li {
+      margin-bottom: 10px;
+    }
+
+    nav ul li a {
+      border: 2px solid transparent;
+      border-radius: 5px;
+      background-color: rgb(4, 4, 4);
+      padding: 3px;
+      margin: 2px;
+      text-decoration: none;
+      color:white;
+      font-weight: bold;
+    }
+    nav ul li a:hover{
+        color: #f0d8d8;
+        background-color: #333;
+        transition: 0.5ms;
+    }
+
+    .content {
+      flex-grow: 1;
+      padding: 20px;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    footer {
+    background-color: #333;
+    color: #fff;
+    padding: 13px;
+    text-align: center;
+}
+
+.footer-links li {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.footer-links li a {
+    text-decoration: none;
+    color: #fff;
+}
+  </style>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      var navLinks = document.querySelectorAll("nav ul li a");
+      var sections = document.querySelectorAll(".content section");
+
+      navLinks.forEach(function(link) {
+        link.addEventListener("click", function(e) {
+          e.preventDefault();
+          var target = this.getAttribute("href").substring(1);
+
+          sections.forEach(function(section) {
+            section.classList.add("hidden");
+          });
+
+          document.getElementById(target).classList.remove("hidden");
+        });
+      });
+    });
+  </script>
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#information">Information</a></li>
+      <li><a href="#guide">Guide</a></li>
+    </ul>
+  </nav>
+
+  <div class="content">
+    <section id="home">
+      <h1>Home</h1>
+      <p>Welcome to the home section.<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita autem libero doloribus quidem odit eum. Molestiae culpa distinctio soluta odio reiciendis, porro, debitis itaque provident quae a, veniam voluptatum ducimus ratione sit? Neque, voluptatum cum nihil cupiditate est voluptates blanditiis enim non soluta hic maiores sint nemo quo eligendi mollitia.</p>
+    </section>
+
+    <section id="contact" class="hidden">
+      <h1>Contact</h1>
+      <p>Contact us here.<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure dolores a cum ipsam voluptate!<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis, esse?<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita veniam dolorum delectus minima recusandae dicta commodi velit accusantium ducimus optio.</p>
+    </section>
+
+    <section id="information" class="hidden">
+      <h1>Information</h1>
+      <p>Here's some information.<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque blanditiis saepe mollitia magni consequatur quae doloremque dolor. Rerum, debitis necessitatibus consequatur recusandae obcaecati esse! Aliquam, quae. Ut voluptates dolore recusandae ad, excepturi provident facere repudiandae sunt similique natus, cum omnis.<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo suscipit nesciunt reiciendis! Aliquam voluptate amet fugiat quam ipsum maxime autem!<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Itaque nesciunt qui debitis, sed excepturi magni, amet laudantium ex consectetur nemo eveniet animi, saepe repellat nobis.</p>
+    </section>
+
+    <section id="guide" class="hidden">
+      <h1>Guide</h1>
+      <p>Here's a guide for you.<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad reiciendis soluta, consequatur molestias doloremque autem minus provident voluptate eos exercitationem odio mollitia quo modi ullam? Sunt eaque perferendis officiis perspiciatis.<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis, ad quam, repellat quod dolore rerum officia sit molestiae consequuntur pariatur nihil natus temporibus, aliquam atque? A, tempora.<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea laudantium tempora expedita aut ratione quisquam enim, iusto, sed harum dicta tempore? Adipisci, possimus. Exercitationem dolores sunt ipsam at vel consequuntur repellendus tenetur incidunt deserunt optio doloribus, praesentium animi!</p>
+    </section>
+  </div>
+
+  <footer>
+    <div class="footer-content">
+        <p>&copy; 2023 Akash Web World. All rights reserved.</p>
+        <ul class="footer-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#information">Information</a></li>
+            <li><a href="#guide">Guide</a></li>
+        </ul>
+      </div>
+  </footer>
+</body>
+</html>

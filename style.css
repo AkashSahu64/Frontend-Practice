@@ -1,0 +1,32 @@
+.container {
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+  h1 {
+    color: #060606;
+  }
+  
+  #timer {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+  }
+  
+  #timer div {
+    margin: 0 20px;
+  }
+  
+  #timer div span {
+    font-size: 48px;
+    font-weight: bold;
+    color: #0f0e0e;
+  }
+  
+  .label {
+    font-size: 14px;
+    color: #666;
+    margin-top: 5px;
+  }
+  
+  
